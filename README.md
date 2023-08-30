@@ -1,9 +1,9 @@
 <img src="/assets/img/shic_logo.png" alt="shic logo" style="height: 250px;"/>
 
 # shic
-shic is a collection of shims for use in automated workflow composition
+shic is a collection of shims for (automated) workflow composition and general utility.
 
-Shims are here understood as being small pieces of glue code to gently massage, or shim, data produced by one software to data expected by another. Semantically they are format converters, although their inputs and outputs could be different dialects or interpretations of the same format.
+The shims are here understood as being small pieces of glue code to gently massage, or shim, data produced by one software into data expected by another. Semantically they are format converters, although their inputs and outputs could be different dialects or interpretations of the same format rather than different formats. The shims are generally dependent on the data type and application domain.
 
 The shims are contained in the [shims folder](shims).
 
