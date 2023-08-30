@@ -1,0 +1,212 @@
+{
+    "name": "shic",
+    "description": "shic is a collection of shims for use in automated workflow composition",
+    "homepage": "https://github.com/magnuspalmblad/shic",
+    "biotoolsID": "shic",
+    "biotoolsCURIE": "biotools:shic",
+    "function": [
+      {
+        "operation": [
+          {
+            "uri": "http://edamontology.org/operation_3434",
+            "term": "Conversion"
+          }
+        ],
+        "input": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_0896",
+              "term": "Protein report"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_3747",
+                "term": "protXML"
+              }
+            ]
+          }
+        ],
+        "output": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_2872",
+              "term": "ID list"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_3475",
+                "term": "TSV"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "operation": [
+          {
+            "uri": "http://edamontology.org/operation_3434",
+            "term": "Conversion"
+          }
+        ],
+        "input": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_2536",
+              "term": "Mass spectrometry data"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_3651",
+                "term": "MGF"
+              }
+            ]
+          }
+        ],
+        "output": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_2536",
+              "term": "Mass spectrometry data"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_3651",
+                "term": "MGF"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "operation": [
+          {
+            "uri": "http://edamontology.org/operation_3434",
+            "term": "Conversion"
+          }
+        ],
+        "input": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_0870",
+              "term": "Sequence distance matrix"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_1912",
+                "term": "Nexus format"
+              }
+            ]
+          }
+        ],
+        "output": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_0870",
+              "term": "Sequence distance matrix"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_1991",
+                "term": "mega"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "operation": [
+          {
+            "uri": "http://edamontology.org/operation_3434",
+            "term": "Conversion"
+          }
+        ],
+        "input": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_2976",
+              "term": "Protein sequence"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_1929",
+                "term": "FASTA"
+              }
+            ]
+          }
+        ],
+        "output": [
+          {
+            "data": {
+              "uri": "http://edamontology.org/data_3021",
+              "term": "UniProt accession"
+            },
+            "format": [
+              {
+                "uri": "http://edamontology.org/format_3475",
+                "term": "TSV"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "toolType": [
+      "Script"
+    ],
+    "license": "MIT",
+    "cost": "Free of charge",
+    "accessibility": "Open access",
+    "elixirCommunity": [
+      "Proteomics",
+      "Galaxy",
+      "Metabolomics"
+    ],
+    "link": [
+      {
+        "url": "https://github.com/magnuspalmblad/shic",
+        "type": [
+          "Repository"
+        ]
+      }
+    ],
+    "documentation": [
+      {
+        "url": "https://github.com/magnuspalmblad/shic/README.md",
+        "type": [
+          "General"
+        ]
+      }
+    ],
+    "credit": [
+      {
+        "name": "Magnus Palmblad",
+        "email": "magnus.palmblad@gmail.com",
+        "orcidid": "https://orcid.org/0000-0002-5865-8994",
+        "typeRole": [
+          "Primary contact"
+        ]
+      },
+      {
+        "name": "Veit Schwämmle",
+        "orcidid": "https://orcid.org/0000-0002-9708-6722"
+      },
+      {
+        "name": "Dirk Winkelhardt",
+        "orcidid": "https://orcid.org/0000-0001-8770-2221"
+      },
+      {
+        "name": "Vedran Kasalica",
+        "orcidid": "https://orcid.org/0000-0002-0097-1056"
+      },
+      {
+        "name": "Anna-Lena Lamprecht",
+        "orcidid": "https://orcid.org/0000-0003-1953-5606"
+      }
+    ],
+    "owner": "n.m.palmblad@lumc.nl",
+    "additionDate": "2023-08-30T13:03:57.407598Z",
+    "lastUpdate": "2023-08-30T14:45:29.877638Z",
+    "validated": 0,
+    "homepage_status": 0,
+    "elixir_badge": 0
+  }
