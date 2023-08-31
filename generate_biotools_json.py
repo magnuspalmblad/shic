@@ -114,17 +114,16 @@ def generate_biotools_functions_json(shims_path) -> List[dict]:
 
 # Call the function to generate the JSON
 json_functions = generate_biotools_functions_json('shims.md')
-json_string = json.dumps(json_functions, indent=4)  # Use indent for pretty formatting
-    
 
-# Print the generated JSON
+# Print the generated JSON - for debugging
+json_string = json.dumps(json_functions, indent=4)  # Use indent for pretty formatting
 with open('assets/functions.json', 'w') as f: f.write(json_string)
 
-# Get the latest version of the 'shic' JSON schema from bio.tools and remove the existing functions
+# Get the latest version of the 'shic' JSON schema from bio.tools
 #TODO
 
 
-# Combine the JSON schema and the generated JSON functions
+# Substitute the functions in the JSON schema with the newly generated JSON functions (json_functions)
 #TODO
 
 # Push the combined JSON to the bio.tools repository
