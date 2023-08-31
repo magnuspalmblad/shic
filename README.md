@@ -3,7 +3,7 @@
 # shic
 shic is a collection of shims for (automated) workflow composition and general utility too small or too trivial to warrant their own repository or entry in software registries.
 
-The shims are here understood as being small pieces of glue code to gently massage, or shim, data produced by one software into data expected by another. Semantically they are format converters, although their inputs and outputs could be different dialects or interpretations of the same format rather than different formats. The shims are generally dependent on the data type and application domain.
+The shims are here understood as being small pieces of glue code to gently massage, or shim, data produced by one software into data expected by another. Semantically they are format converters, although their inputs and outputs may be different dialects or interpretations of the same format rather than different formats. The shims are generally dependent on the data type and application domain.
 
 The shims are contained in the [shims folder](shims).
 
