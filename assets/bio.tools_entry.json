@@ -5,150 +5,186 @@
     "biotoolsID": "shic",
     "biotoolsCURIE": "biotools:shic",
     "function": [
-      {
-        "operation": [
-          {
-            "uri": "http://edamontology.org/operation_3434",
-            "term": "Conversion"
-          }
-        ],
-        "input": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_0896",
-              "term": "Protein report"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_3747",
-                "term": "protXML"
-              }
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0896",
+                        "term": "Protein report"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3747",
+                            "term": "protXML"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2872",
+                        "term": "ID list"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
             ]
-          }
-        ],
-        "output": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_2872",
-              "term": "ID list"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_3475",
-                "term": "TSV"
-              }
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2536",
+                        "term": "Mass spectrometry data"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3651",
+                            "term": "MGF"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2536",
+                        "term": "Mass spectrometry data"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3651",
+                            "term": "MGF"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
             ]
-          }
-        ]
-      },
-      {
-        "operation": [
-          {
-            "uri": "http://edamontology.org/operation_3434",
-            "term": "Conversion"
-          }
-        ],
-        "input": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_2536",
-              "term": "Mass spectrometry data"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_3651",
-                "term": "MGF"
-              }
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0870",
+                        "term": "Sequence distance matrix"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_1912",
+                            "term": "Nexus format"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0870",
+                        "term": "Sequence distance matrix"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_1991",
+                            "term": "mega"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
             ]
-          }
-        ],
-        "output": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_2536",
-              "term": "Mass spectrometry data"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_3651",
-                "term": "MGF"
-              }
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2976",
+                        "term": "Protein sequence"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_1929",
+                            "term": "FASTA"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_3021",
+                        "term": "UniProt accession"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
             ]
-          }
-        ]
-      },
-      {
-        "operation": [
-          {
-            "uri": "http://edamontology.org/operation_3434",
-            "term": "Conversion"
-          }
-        ],
-        "input": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_0870",
-              "term": "Sequence distance matrix"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_1912",
-                "term": "Nexus format"
-              }
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0945",
+                        "term": "Peptide identification"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3655",
+                            "term": "pepXML"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2976",
+                        "term": "Protein sequence"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
             ]
-          }
-        ],
-        "output": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_0870",
-              "term": "Sequence distance matrix"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_1991",
-                "term": "mega"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "operation": [
-          {
-            "uri": "http://edamontology.org/operation_3434",
-            "term": "Conversion"
-          }
-        ],
-        "input": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_2976",
-              "term": "Protein sequence"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_1929",
-                "term": "FASTA"
-              }
-            ]
-          }
-        ],
-        "output": [
-          {
-            "data": {
-              "uri": "http://edamontology.org/data_3021",
-              "term": "UniProt accession"
-            },
-            "format": [
-              {
-                "uri": "http://edamontology.org/format_3475",
-                "term": "TSV"
-              }
-            ]
-          }
-        ]
-      }
+        }
     ],
     "toolType": [
       "Script"
