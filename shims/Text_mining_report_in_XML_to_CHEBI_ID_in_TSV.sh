@@ -1,1 +1,2 @@
-xmllint --xpath "//*[local-name()='uri']/text()" annotationsByArticleIds.xml | grep -oP "CHEBI.+" | sed 's/_/:/'
+#!/bin/bash
+xmllint --xpath "//*[local-name()='uri']/text()" $1 | grep -oP "CHEBI.+" | sed 's/_/:/' $2
