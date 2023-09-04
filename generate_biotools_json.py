@@ -1,5 +1,6 @@
 import re
 import json
+import requests
 from typing import List, Dict
 
 # Define the column numbers for the input and output data type and format
@@ -110,21 +111,71 @@ def generate_biotools_functions_json(shims_path) -> List[dict]:
     return json_functions
 
 
-    
+def fetch_json_from_url(url):
+    """
+    Fetch JSON data from the given URL.
+    :param url: The URL to fetch the JSON data from.
+    :return: The JSON data fetched from the URL.
+    """
+    try:
+        # Fetch JSON data from the URL
+        response = requests.get(url)
+        response.raise_for_status()  # Check for HTTP errors
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data from URL: {e}")
+        return None
+    except ValueError as e:
+        print(f"Error parsing JSON data: {e}")
+        return None
+
+def remove_null_fields(json_data):
+    """
+    Remove null values and empty arrays from the given JSON data.
+    :param json_data: The JSON data to remove null values and empty arrays from.
+    :return: The JSON data with null values and empty arrays removed.
+    """
+    # Function to recursively remove null values and empty arrays from a dictionary
+    def remove_null_and_empty(obj):
+        if isinstance(obj, list):
+            return [remove_null_and_empty(item) for item in obj if item is not None and item != []]
+        elif isinstance(obj, dict):
+            return {key: remove_null_and_empty(value) for key, value in obj.items() if value is not None and value != []}
+        else:
+            return obj
+
+    # Remove null values and empty arrays from the JSON data
+    return remove_null_and_empty(json_data)
+
+
+def replace_functions_with_array(json_object, new_array):
+    """
+    Replace the "function" field in the given JSON object with the given array.
+    :param json_object: The JSON object to replace the "function" field in.
+    :param new_array: The new array to replace the "function" field with.
+    :return: The modified JSON object."""
+    # Create a copy of the input JSON object to avoid modifying the original
+    modified_json = json_object.copy()
+
+    # Replace the "function" field with the new array
+    modified_json["function"] = new_array
+
+    return modified_json
+
 
 # Call the function to generate the JSON
 json_functions = generate_biotools_functions_json('shims.md')
 
-# Print the generated JSON - for debugging
-json_string = json.dumps(json_functions, indent=4)  # Use indent for pretty formatting
-with open('assets/functions.json', 'w') as f: f.write(json_string)
-
 # Get the latest version of the 'shic' JSON schema from bio.tools
-#TODO
-
+raw_biotools_json = fetch_json_from_url("https://bio.tools/api/shic?format=json")
+biotools_json = remove_null_fields(raw_biotools_json)
 
 # Substitute the functions in the JSON schema with the newly generated JSON functions (json_functions)
-#TODO
+final_json = replace_functions_with_array(biotools_json, json_functions)
+
+# Print the generated JSON to a file
+json_string = json.dumps(final_json, indent=4)  # Use indent for pretty formatting
+with open('assets/bio.tools_entry.json', 'w') as f: f.write(json_string)
 
 # Push the combined JSON to the bio.tools repository
-#TODO
+#TODO: It is currently done manually, but it should be automated in the future. 

@@ -259,62 +259,69 @@
         }
     ],
     "toolType": [
-      "Script"
+        "Script"
     ],
     "license": "MIT",
     "cost": "Free of charge",
     "accessibility": "Open access",
     "elixirCommunity": [
-      "Proteomics",
-      "Galaxy",
-      "Metabolomics"
+        "Proteomics",
+        "Galaxy",
+        "Metabolomics"
     ],
     "link": [
-      {
-        "url": "https://github.com/magnuspalmblad/shic",
-        "type": [
-          "Repository"
-        ]
-      }
+        {
+            "url": "https://github.com/magnuspalmblad/shic",
+            "type": [
+                "Repository"
+            ]
+        }
     ],
     "documentation": [
-      {
-        "url": "https://github.com/magnuspalmblad/shic/README.md",
-        "type": [
-          "General"
-        ]
-      }
+        {
+            "url": "https://github.com/magnuspalmblad/shic/README.md",
+            "type": [
+                "General"
+            ]
+        }
     ],
     "credit": [
-      {
-        "name": "Magnus Palmblad",
-        "email": "magnus.palmblad@gmail.com",
-        "orcidid": "https://orcid.org/0000-0002-5865-8994",
-        "typeRole": [
-          "Primary contact"
-        ]
-      },
-      {
-        "name": "Veit Schwämmle",
-        "orcidid": "https://orcid.org/0000-0002-9708-6722"
-      },
-      {
-        "name": "Dirk Winkelhardt",
-        "orcidid": "https://orcid.org/0000-0001-8770-2221"
-      },
-      {
-        "name": "Vedran Kasalica",
-        "orcidid": "https://orcid.org/0000-0002-0097-1056"
-      },
-      {
-        "name": "Anna-Lena Lamprecht",
-        "orcidid": "https://orcid.org/0000-0003-1953-5606"
-      }
+        {
+            "name": "Magnus Palmblad",
+            "email": "magnus.palmblad@gmail.com",
+            "orcidid": "https://orcid.org/0000-0002-5865-8994",
+            "typeRole": [
+                "Primary contact"
+            ]
+        },
+        {
+            "name": "Veit Schw\u00e4mmle",
+            "orcidid": "https://orcid.org/0000-0002-9708-6722"
+        },
+        {
+            "name": "Dirk Winkelhardt",
+            "orcidid": "https://orcid.org/0000-0001-8770-2221"
+        },
+        {
+            "name": "Vedran Kasalica",
+            "orcidid": "https://orcid.org/0000-0002-0097-1056"
+        },
+        {
+            "name": "Anna-Lena Lamprecht",
+            "orcidid": "https://orcid.org/0000-0003-1953-5606"
+        }
     ],
     "owner": "n.m.palmblad@lumc.nl",
     "additionDate": "2023-08-30T13:03:57.407598Z",
-    "lastUpdate": "2023-08-31T15:52:52.675315Z",
+    "lastUpdate": "2023-09-04T15:33:30.029224Z",
+    "editPermission": {
+        "type": "group",
+        "authors": [
+            "VKasalica",
+            "veits@bmb.sdu.dk"
+        ]
+    },
     "validated": 0,
     "homepage_status": 0,
     "elixir_badge": 0
-  }
+}
