@@ -184,6 +184,78 @@
                     "term": "Conversion"
                 }
             ]
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0945",
+                        "term": "Peptide identification"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3247",
+                            "term": "mzIdentML"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_2976",
+                        "term": "Protein sequence"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
+            ]
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0972",
+                        "term": "Text mining report"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_2332",
+                            "term": "XML"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_1174",
+                        "term": "CHEBI ID"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
+            ]
         }
     ],
     "toolType": [
@@ -241,7 +313,7 @@
     ],
     "owner": "n.m.palmblad@lumc.nl",
     "additionDate": "2023-08-30T13:03:57.407598Z",
-    "lastUpdate": "2023-08-30T14:45:29.877638Z",
+    "lastUpdate": "2023-08-31T15:52:52.675315Z",
     "validated": 0,
     "homepage_status": 0,
     "elixir_badge": 0
