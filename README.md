@@ -9,7 +9,7 @@ In our interpretation (not to be confused with the one in [Wikipedia](https://en
 
 The shims are contained in the [shims folder](shims) as simple executable scripts in bash, Python or others scripting language.
 
-For a coarse but standardized description of the functionality, we rely on the [EDAM ontology](edamontology.github.io/). The [shims.md table](shims.md) contains minimum metadata for all shims, including EDAM data type and format for the shim input and output, the operation (typically [Conversion](http://edamontology.org/operation_3434)), [domain](http://edamontology.org/topic_0003) and intended use.
+For a coarse but standardized description of the functionality, we rely on the [EDAM ontology](https://edamontology.github.io/). The [shims.md table](shims.md) contains minimum metadata for all shims, including EDAM data type and format for the shim input and output, the operation (typically [Conversion](http://edamontology.org/operation_3434)), [domain](http://edamontology.org/topic_0003) and intended use.
 
 shic is developed to support the [Workflomics](https://research-software-directory.org/software/workflomics) project on automated workflow exploration and benchmarking.
 
