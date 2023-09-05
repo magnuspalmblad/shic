@@ -17,11 +17,6 @@ shic is developed to support the [Workflomics](https://research-software-directo
 
 Tools such as [awk](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2), [cut](https://usegalaxy.eu/root?tool_id=Cut1), [grep](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1) and [XPath](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/xpath/xpath/1.0.0) used by these shims are available on common [UseGalaxy servers](https://galaxyproject.org/use/), and can be used to implement many of these shims directly in Galaxy workflows.
 
-## Update the bio.tools [entry](https://bio.tools/shic)
+# Update the bio.tools [entry](https://bio.tools/shic)
 
-The script `generate_biotools_json.py` is used to compile the complete bio.tools JSON entry.
-
-Currently, users should manually upload the content of the file [assets/bio.tools_entry.json](https://github.com/magnuspalmblad/shic/blob/main/assets/bio.tools_entry.json) to [bio.tools](https://bio.tools/shic/edit) (Tool Update -> JSON interface) or use bio.tools API.
-
-In the future, this will be automated as a GitHub action using bio.tools API.
-
+The script [generate_biotools_json.py](generate_biotools_json.py) is used to compile the complete bio.tools JSON entry based on the metadata in the [shims.md](shims.md) table. Currently, users should manually upload the content of the file [assets/bio.tools_entry.json](https://github.com/magnuspalmblad/shic/blob/main/assets/bio.tools_entry.json) to [bio.tools](https://bio.tools/shic/edit) (Update this record -> JSON) or use the bio.tools API. In the future, this will be automated as a GitHub action using bio.tools API.
