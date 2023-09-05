@@ -13,7 +13,7 @@ For a coarse but standardized description of the functionality, we rely on the [
 
 shic is developed to support the [Workflomics](https://research-software-directory.org/software/workflomics) project on automated workflow exploration and benchmarking.
 
-# Notes for developers
+# Notes for curators and developers
 
 [shims.md](shims.md) is automatically parsed to generate the [shic bio.tools entry](https://bio.tools/shic). Changing its format (non-table content, columns, column names, EDAM references, etc.) may require corresponding changes to the parser.
 
