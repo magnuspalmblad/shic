@@ -7,6 +7,8 @@ _What is a "shim"?_
 
 In our interpretation (not to be confused with the one in [Wikipedia](https://en.wikipedia.org/wiki/Shim_(computing))), a shim is a short code fragment that fills the gaps when creating a data processing workflow from separate software tools. Here a shim can be a few lines of code that extract the necessary information from a more complex file, convert between similar but not identical file types, or add redundant information to fill input requirements. In other words, shims are understood as being small pieces of glue code to gently massage, or shim, data produced by one software into data expected by another. Semantically, most shims are [format converters](http://edamontology.org/operation_3434), although their inputs and outputs may be different dialects or interpretations of the same format rather than different formats. The shims are generally dependent on the data type and application domain.
 
+For technical reasons, including automatic annotation in [bio.tools](https://bio.tools) and simplifying the master shim interface to the shim collection, we only includes those shims that take a single file as input and outputs a single file.
+
 The shims are contained in the [shims folder](shims) as simple executable scripts in bash, Python or others scripting language.
 
 For a coarse but standardized description of the functionality, we rely on the [EDAM ontology](https://edamontology.org). The [shims.md table](shims.md) contains minimum metadata for all shims, including EDAM data type and format for the shim input and output, the operation (typically [Conversion](http://edamontology.org/operation_3434)), [domain](http://edamontology.org/topic_0003) and intended use.
