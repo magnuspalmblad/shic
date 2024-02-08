@@ -12,6 +12,11 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+# get the current date and time (of the conversion to mzIdentML)
+creationDate=`date -I'ns'|tr ',' '.'| awk 'sub("00\+.+","Z")'`
+
+echo "creationDate" $creationDate
+
 # Check Sage version (assumes Sage is in the current directory)
 if [ -f ./sage.exe ]; then
 	version=`./sage.exe --version | cut -f2 -d ' '`
@@ -25,10 +30,10 @@ inputfile=$1
 outputfile="${inputfile%.tsv}.mzid"
 
 # Start and sequence collection of the mzIdentML file
-awk -v version=$version '
+awk -v version=$version -v creationDate=$creationDate '
 	BEGIN {
 		print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
-		print("<MzIdentML xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" id=\"\" xsi:schemaLocation=\"http://psidev.info/psi/pi/mzIdentML/1.1 http://www.psidev.info/files/mzIdentML1.2.0.xsd\" creationDate=\"2024-02-06T15:14:03.2025834Z\" version=\"1.2.0\" xmlns=\"http://psidev.info/psi/pi/mzIdentML/1.2\">");
+		printf("<MzIdentML xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" id=\"\" xsi:schemaLocation=\"http://psidev.info/psi/pi/mzIdentML/1.1 http://www.psidev.info/files/mzIdentML1.2.0.xsd\" creationDate=\"%s\" version=\"1.2.0\" xmlns=\"http://psidev.info/psi/pi/mzIdentML/1.2\">", creationDate);
 		print("  <cvList>");
 		print("    <cv fullName=\"Proteomics Standards Initiative Mass Spectrometry Vocabularies\" version=\"4.1.99\" uri=\"https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo\" id=\"PSI-MS\" />");
 		print("    <cv fullName=\"UNIMOD\" uri=\"https://raw.githubusercontent.com/HUPO-PSI/psi-ms-CV/master/psi-ms.obo\" id=\"UNIMOD\" />");
@@ -89,5 +94,3 @@ awk '
 ' $inputfile >> $outputfile
 
 echo "Conversion completed: $outputfile"
-
-
