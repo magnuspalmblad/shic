@@ -31,7 +31,7 @@ outputfile="${inputfile%.tsv}.mzid"
 
 # Start and sequence collection of the mzIdentML file
 awk -v version=$version -v creationDate=$creationDate '
-	BEGIN {
+	BEGIN {FS="\t";
 		print("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 		printf("<MzIdentML xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" id=\"\" xsi:schemaLocation=\"http://psidev.info/psi/pi/mzIdentML/1.1 http://www.psidev.info/files/mzIdentML1.2.0.xsd\" creationDate=\"%s\" version=\"1.2.0\" xmlns=\"http://psidev.info/psi/pi/mzIdentML/1.2\">", creationDate);
 		print("  <cvList>");
@@ -66,23 +66,21 @@ awk -v version=$version -v creationDate=$creationDate '
 
 # Analysis data and end of the mzIdentML file
 awk '
-	BEGIN {
+	BEGIN {FS="\t";
 		print("  <DataCollection>");
 		print("    <AnalysisData>");
 		print("      <SpectrumIdentificationList id=\"SIL_1\">");
 	}
 	(NR>1) {
 		sub("scan=", "", $8)
-		printf("        <SpectrumIdentificationResult id=\"SIR_%i\" spectrumID=\"index=%i\" spectraData_ref=\"SD_%i\" name=\"%s\">\n", NR-2, NR-2, NR-1, $8);
-		printf("          <SpectrumIdentificationItem id=\"SII_%i_%i\" chargeState=\"%i\" experimentalMassToCharge=\"%f\" calculatedMassToCharge=\"%f\" peptide_ref=\"%s_%09d\" rank=\"%i\">\n", NR-2, 1, $13, $11, $12, $2, NR-1, $9);
+		printf("        <SpectrumIdentificationResult id=\"SIR_%i\" spectrumID=\"index=%i\" spectraData_ref=\"SD_%i\" name=\"%s\">\n", NR-2, NR-2, NR-1, $6);
+		printf("          <SpectrumIdentificationItem id=\"SII_%i_%i\" chargeState=\"%i\" experimentalMassToCharge=\"%f\" calculatedMassToCharge=\"%f\" peptide_ref=\"%s_%09d\" rank=\"%i\">\n", NR-2, 1, $11, $9, $10, $2, NR-1, $7);
 		printf("            <PeptideEvidenceRef peptideEvidence_ref=\"%s_%09d_%s\" />\n", $2, NR-1, $3);
-		printf("            <cvParam name=\"X!Tandem:hyperscore\" value=\"%f\" cvRef=\"PSI-MS\" accession=\"MS:1001331\" />\n", $20); # Pretend to be X!Tandem hyperscore
-		
-		
+		printf("            <cvParam name=\"X!Tandem:hyperscore\" value=\"%f\" cvRef=\"PSI-MS\" accession=\"MS:1001331\" />\n", $18); # Pretend to be X!Tandem hyperscore
 		
 		print("          </SpectrumIdentificationItem>");
-		
-		
+		printf("          <cvParam cvRef=\"MS\" accession=\"MS:1000016\" name=\"scan start time\" value=\"%s\" unitCvRef=\"UO\" unitAccession=\"UO:0000031\" unitName=\"minute\"/>\n",$21);
+
 		print("        </SpectrumIdentificationResult>");
 	}
 	END {
