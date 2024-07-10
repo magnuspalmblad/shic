@@ -1,4 +1,4 @@
-name: Generate bio.tools annotations
+name: bio.tools annotations
 
 on:
   push:
