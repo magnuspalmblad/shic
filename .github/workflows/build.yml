@@ -16,27 +16,34 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: ['ubuntu-latest'] # ['ubuntu-latest', 'macos-latest', 'windows-latest']
-        python-version: ['3.9'] # ['3.7', '3.8', '3.9', '3.10', '3.11']
+        os: ['ubuntu-latest'] 
+        python-version: ['3.9']
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Python info
         shell: bash -l {0}
         run: |
           which python3
           python3 --version
+          
       - name: Upgrade pip and install dependencies
         run: |
           python3 -m pip install --upgrade pip setuptools
           python3 -m pip install requests
+
       - name: Generate the new bio.tools annotations
         run: python3 ./generate_biotools_json.py
-      - name: Upload bio.tools annotations
-        uses: actions/upload-artifact@v3
+
+      - name: List generated files
+        run: ls -la assets/
+
+      - name: Upload bio.tools annotations as artifact
+        uses: actions/upload-artifact@v4
         with:
           name: biotools-annotations
-          path: ./assets/bio.tools_entry.json
+          path: assets/bio.tools_entry.json
