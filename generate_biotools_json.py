@@ -4,15 +4,15 @@ import requests
 from typing import List, Dict
 
 # Define the column numbers for the input and output data type and format
-input_type_column = 0
+input_type_column = 1
 """ Column for input data type. """
-input_format_column = 1
+input_format_column = 2
 """ Column for input data format. """
-operation_column = 2
+operation_column = 3
 """ Column for operation. """
-output_type_column = 3
+output_type_column = 4
 """ Column for output data type. """
-output_format_column = 4
+output_format_column = 5
 """ Column for output data format. """
 rows_to_skip = 2
 """ Number of rows to skip at the start of the table. """

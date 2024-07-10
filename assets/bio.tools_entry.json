@@ -256,6 +256,42 @@
                     "term": "Conversion"
                 }
             ]
+        },
+        {
+            "input": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0945",
+                        "term": "Peptide identification"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3475",
+                            "term": "TSV"
+                        }
+                    ]
+                }
+            ],
+            "output": [
+                {
+                    "data": {
+                        "uri": "http://edamontology.org/data_0945",
+                        "term": "Peptide identification"
+                    },
+                    "format": [
+                        {
+                            "uri": "http://edamontology.org/format_3247",
+                            "term": "mzIdentML"
+                        }
+                    ]
+                }
+            ],
+            "operation": [
+                {
+                    "uri": "http://edamontology.org/operation_3434",
+                    "term": "Conversion"
+                }
+            ]
         }
     ],
     "toolType": [
@@ -313,7 +349,7 @@
     ],
     "owner": "n.m.palmblad@lumc.nl",
     "additionDate": "2023-08-30T13:03:57.407598Z",
-    "lastUpdate": "2023-09-04T15:33:30.029224Z",
+    "lastUpdate": "2023-09-04T16:01:20.376269Z",
     "editPermission": {
         "type": "group",
         "authors": [
