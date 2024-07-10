@@ -25,5 +25,18 @@ Tools such as [awk](https://usegalaxy.eu/root?tool_id=toolshed.g2.bx.psu.edu/rep
 
 # Updating the [bio.tools entry](https://bio.tools/shic)
 
-The script [generate_biotools_json.py](generate_biotools_json.py) is used to compile the complete bio.tools JSON entry based on the metadata in the [shims.md](shims.md) table. Currently, users should manually upload the content of [assets/bio.tools_entry.json](https://github.com/magnuspalmblad/shic/blob/main/assets/bio.tools_entry.json) to the [shic entry in bio.tools](https://bio.tools/shic/edit) using "Update this record" -> "JSON" or the bio.tools API. In the future, this will be automated as a GitHub action using bio.tools API.
+## Semi-automatic update
+
+After each push to the `main` branch the new bio.tools annotation file is generated and available as an _Artifact_ in the [GitHub action](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml). Step to update bio.tools `shic` entry:
+
+1. Go to the [GitHub action](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml).
+2. Select the latest run, scroll to _Artifacts_ (at the bottom) and download the file.
+3. Open the [shic entry in bio.tools](https://bio.tools/shic/edit) (you must be logged in as a maintainer of the tool in bio.tools to access the `/edit` screen).
+4. Navigate to the `JSON` tab and paste the content of the downloaded file into the text box.
+5. Click `Validate` to validate the JSON structure.
+6. Click `Save` to update the entry.
+
+## Local update
+
+The script [generate_biotools_json.py](generate_biotools_json.py) is used to compile the complete bio.tools JSON entry based on the metadata in the [shims.md](shims.md) table. The user should manually upload the content of `assets/bio.tools_entry.json` to the [shic entry in bio.tools](https://bio.tools/shic/edit) using "Update this record" -> "JSON" or the bio.tools API (see steps 4-6 in the [Semi-automatic update](#semi-automatic-update) section).
 
