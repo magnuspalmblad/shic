@@ -33,5 +33,10 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip setuptools
           python3 -m pip install requests
-      - name: Run unit tests
+      - name: Generate the new bio.tools annotations
         run: python3 ./generate_biotools_json.py
+      - name: Upload bio.tools annotations
+        uses: actions/upload-artifact@v3
+        with:
+          name: biotools-annotations
+          path: ./assets/bio.tools_entry.json
