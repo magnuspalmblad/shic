@@ -1,5 +1,7 @@
 <img src="/assets/img/shic_logo.png" alt="shic logo" style="height: 250px;"/>
 
+[![bio.tools annotations](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml/badge.svg)](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml)
+
 # shic
 shic is a collection of shims for (automated) workflow composition and general utility too small or too trivial to warrant their own repository or entry in software registries.
 
