@@ -12,6 +12,9 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+# Avoid inconsistencies in AWK output resulting from locale settings
+export LC_ALL=C
+
 # get the current date and time (of the conversion to mzIdentML)
 creationDate=`date -I'ns'|tr ',' '.'| awk 'sub("00\+.+","Z")'`
 
