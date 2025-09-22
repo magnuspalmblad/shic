@@ -3,6 +3,7 @@
 # shic
 [![bio.tools annotations](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml/badge.svg)](https://github.com/magnuspalmblad/shic/actions/workflows/bio.tools.yml)
 [![GitHub license](https://img.shields.io/github/license/magnuspalmblad/shic)](https://github.com/magnuspalmblad/shic/blob/main/LICENSE)
+[![bio.tools](https://img.shields.io/badge/bio.tools-shic-005472)](https://bio.tools/shic)
 
 shic is a collection of shims for (automated) workflow composition and general utility too small or too trivial to warrant their own repository or entry in software registries.
 
